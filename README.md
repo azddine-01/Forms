@@ -19,6 +19,10 @@ Some example forms:
 - `images/` – Screenshots and images  
 
 ## 🚀 How to Run
+Visit :
+https://azddine-01.github.io/Forms
+
+### Or
 
 1. Clone the repository:
    ```bash
@@ -26,3 +30,4 @@ Some example forms:
    cd Forms
    ```
 2. Open index.html in your browser.
+
