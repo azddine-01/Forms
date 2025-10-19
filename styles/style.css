@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    margin: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 60px 50px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    text-align: center;
+}
+
+#welcomeback {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 18px 25px;
+    border: none;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.95);
+    font-size: 15px;
+    color: #666;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #aaa;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+textarea {
+    border-radius: 25px;
+    min-height: 120px;
+    resize: vertical;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    margin: auto 35%;
+    width: 100px;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background: #5a67d8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    font-weight: 600;
+    color: white;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: #4c51bf;
+    box-shadow: 0 10px 30px rgba(90, 103, 216, 0.4);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Profile Image Styles */
+.profile-image-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: -80px auto 30px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gender Radio Buttons */
+.gender-container {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gender-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.gender-options {
+    display: flex;
+    gap: 30px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #5a67d8;
+}
+
+.radio-option label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Date Input Styling */
+input[type="date"] {
+    color: #5a67d8;
+    font-weight: 500;
+    text-align: center;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: opacity(0.6);
+}
+
+/* Select Dropdown */
+select {
+    cursor: pointer;
+    appearance: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+select option {
+    color: white;
+    background-color: rgba(90, 103, 216, 0.589);
+
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #card {
+        padding: 50px 30px;
+    }
+
+    #welcomeback {
+        font-size: 26px;
+        margin-bottom: 40px;
+    }
+
+    .profile-image-container {
+        width: 120px;
+        height: 120px;
+        margin: -70px auto 25px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .gender-options {
+        gap: 20px;
+    }
+}
